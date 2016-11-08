@@ -1,0 +1,28 @@
+doctype html
+html(lang='ru')
+	head
+		title main
+
+		include ./partials/head.jade
+
+	body
+		include ./partials/noscript.jade
+		include ./partials/top-line.jade
+		section.top-line(style='background-image: url(../img/content/bg-1.jpg)')
+			.shad-bg
+				.top-title
+					h2 Food with love
+					h3 Food with passion
+					h4 Food is art...
+
+				a#scroll-btn(href="#about")
+					span
+
+		include ./partials/navigation.jade
+
+		
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade
