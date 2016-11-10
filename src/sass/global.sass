@@ -22,6 +22,8 @@ section
 	position: relative
 	display: block
 	width: 100%
+	padding: 60px 0
+	background-size: cover
 a
 	border: none
 	outline: none
@@ -390,3 +392,24 @@ button, .btn, input[type="button"]
 		height: 0
 		display: table
 		clear: both
+
+h3.underline
+	text-transform: uppercase
+	margin-bottom: 40px
+	font-size: 35px
+	color: #000
+	span
+		position: relative
+		direction: inline-block
+		&:after
+			position: absolute
+			content: ''
+			bottom: -4px
+			right: 0
+			width: 100%
+			height: 4px
+			background: #000
+	&.white
+		span
+			&:after
+				background: #fff

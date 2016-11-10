@@ -8,6 +8,7 @@ html(lang='ru')
 	body
 		include ./partials/noscript.jade
 		include ./partials/top-line.jade
+
 		section.top-line(style='background-image: url(../img/content/bg-1.jpg)')
 			.shad-bg
 				.top-title
@@ -17,6 +18,62 @@ html(lang='ru')
 
 				a#scroll-btn(href="#about")
 					span
+		section#about.about
+			.container
+				h3.underline ОБО 
+					span  Мне
+				.inline-layout.col-2
+					.text-holder
+						.text-1
+							h4 Кто?
+							p Анатолий Бордиян
+							h4 Когда?
+							p Первый раз в 10 лет.
+							h4 Где?
+							p У бабушки
+							h4 С кем?
+							p С пирожками
+							h4 Увлечения?
+							p Кулинария и кино.
+							h4 Какие изыки?
+							p 
+								|Запара,остатки,кто бл....дь взял мой нож? поставщики прое....лись, во сколько отдаём                     банкет? где натёртый пармеза..... а вот он, парни есть зеленуха рубленная?кто варил пюре?пересорт грейпа на апельсин,базик, солярка,замут, во во нормальное музло, два борща первым курсом,постоянник, кинь в мороз , можно Том Ям не острый? еблашку подкинь,креветоны ,морики, уважаемые         официанты,можно попросить  вас принести  чистых натёртых тарелок?Спасибо огромное.
+					.image-holder
+						img(src="img/content/moreak-ava-2.jpg", alt="")
+
+		section.my-food(style='background-image: url(../img/content/bg-2.jpg)')
+			.anim-holder
+				#anim-block-1
+				#anim-block-2
+				#anim-block-3
+				#anim-block-4
+
+			.container
+				h3.underline.white Мои 
+						span  блюда
+				ul.inline-layout.col-4
+					mixin new-food-item(name, src)
+						li.food-item
+							a(href="")
+								.image-holder
+									img.fake-img(src= src, alt= src)
+									.img(style='background-image: url( '+src+')')
+								.description
+									p= name
+							
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-1.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-2.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-3.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-4.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-5.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-6.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-7.jpg')
+					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-8.jpg')
+
+		
+
+       
+
 
 		include ./partials/navigation.jade
 

@@ -1,0 +1,60 @@
+doctype html
+html(lang='ru')
+	head
+		title main
+
+		include ./partials/head.jade
+
+	body
+		include ./partials/noscript.jade
+		include ./partials/top-line.jade
+
+		section.top-line(style='background-image: url(../img/content/bg-1.jpg)')
+			.shad-bg
+				.top-title
+					h2 Food with love
+					h3 Food with passion
+					h4 Food is art...
+
+				a#scroll-btn(href="#about")
+					span
+		section.galery
+			.container
+				h3.underline 
+					span  Галерея
+
+				.galery-holder
+					.inline-layout
+						mixin new-gal-item(src)
+							.gal-item
+								a(href="")
+									.image-holder
+										img.fake-img(src= src, alt= src)
+										.img(style='background-image: url( '+src+')')
+								
+						+new-gal-item('img/content/gal-1.jpg')
+						+new-gal-item('img/content/gal-2.jpg')
+						+new-gal-item('img/content/gal-3.jpg')
+						+new-gal-item('img/content/gal-4.jpg')
+						+new-gal-item('img/content/gal-5.jpg')
+						+new-gal-item('img/content/gal-6.jpg')
+						+new-gal-item('img/content/gal-7.jpg')
+						+new-gal-item('img/content/gal-8.jpg')
+						+new-gal-item('img/content/gal-9.jpg')
+
+				
+
+		
+		
+
+       
+
+
+		include ./partials/navigation.jade
+
+		
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade
