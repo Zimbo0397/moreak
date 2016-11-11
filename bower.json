@@ -3,8 +3,7 @@
   "description": "Personal Cite",
   "main": "index.html",
   "moduleType": [],
-  "keywords": [
-  ],
+  "keywords": [],
   "authors": [
     "V. Zbryzskiy"
   ],
@@ -22,6 +21,8 @@
     "jquery": "^3.0.0",
     "jquery.browser": "latest",
     "font-awesome": "~4.5.0",
-    "bxslider-4": "bx-slider.js#^4.2.5"
+    "bxslider-4": "bx-slider.js#^4.2.5",
+    "Bootstrap-Image-Gallery": "^3.4.2",
+    "blueimp-gallery": "^2.21.3"
   }
 }

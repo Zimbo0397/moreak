@@ -1,0 +1,106 @@
+doctype html
+html(lang='ru')
+	head
+		title main
+
+		include ./partials/head.jade
+
+	body
+		include ./partials/noscript.jade
+		include ./partials/top-line.jade
+
+		section.top-line(style='background-image: url(../img/content/bg-1.jpg)')
+			.shad-bg
+				.top-title
+					h2 Food with love
+					h3 Food with passion
+					h4 Food is art...
+
+				a#scroll-btn(href="#about")
+					span
+		section.video
+			.container
+				h3.underline  Мои
+					span   видео
+
+				.video-holder
+					.inline-layout.col-3
+						mixin new-video-item(ysrc, imgsrc)
+							.video-item
+								.iframe-holder(data-href= ysrc, style="background-image: url( "+imgsrc+")")
+
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+
+					.see-more
+						a(href="#").button Загрузить еще
+							i.fa.fa-refresh.fa-spin
+
+		section.video
+			.container
+				h3.underline  Теле
+					span   Шоу
+
+				.video-holder
+					.inline-layout.col-3
+						mixin new-video-item(ysrc, imgsrc)
+							.video-item
+								.iframe-holder(data-href= ysrc, style="background-image: url( "+imgsrc+")")
+
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						)
+
+					.see-more
+						a(href="#").button Загрузить еще
+							i.fa.fa-refresh.fa-spin
+
+		#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+			.slides
+			h3.title
+			a.prev ‹
+			a.next ›
+			a.close ×
+			a.play-pause
+			ol.indicator
+		
+		
+
+       
+
+
+		include ./partials/navigation.jade
+
+		
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade

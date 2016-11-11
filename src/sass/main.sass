@@ -37,9 +37,13 @@ section.test-block
 	text-align: right
 	li
 		display: inline-block
+		transition: background .2s
 		a
 			color: #fff
 			margin: 0 10px
+		&:hover
+			background: #12908b
+			transition: background .2s
 .logo-block
 	position: absolute
 	left: 0
@@ -197,13 +201,98 @@ section.test-block
 					left: 50%
 					top: 50%
 					transform: translateY(-50%) translateX(-50%)
+			&:hover
+				a
+					background: #fff
+					i
+						color: #000
 
 .galery
-	
+	margin-top: 70px
 .galery-holder
+	margin-top: 70px
 	.gal-item
-		&:ntch-child(1)
+		float: left
+		overflow: hidden
+		font-size: 0
+		letter-spacing: 0
+		outline: 10px solid #fff
+		&:nth-child(10n + 1)
 			width: 50%
+			height: 400px
+		&:nth-child(10n + 2)
+			width: 25%
+			height: 200px
+		&:nth-child(10n + 3)
+			width: 25%
+			height: 200px
+		&:nth-child(10n + 4)
+			width: 50%
+			height: 200px
+		&:nth-child(10n + 5)
+			width: 25%
+			height: 400px
+			img
+				width: auto
+				height: 100%
+		&:nth-child(10n + 6)
+			width: 25%
+			height: 200px
+		&:nth-child(10n + 7)
+			width: 25%
+			height: 200px
+		&:nth-child(10n + 8)
+			width: 25%
+			height: 200px
+		&:nth-child(10n + 9)
+			width: 25%
+			height: 200px
+		&:nth-child(10n + 10)
+			width: 50%
+			height: 200px
+			float: left
+		// .image-holder
+		// 	height: 100%
+
+
+.video
+	.video-holder
+		.inline-layout
+			.video-item
+				padding: 10px
+				position: relative
+				cursor: pointer
+				.iframe-holder
+					position: relative
+					&:after
+						content: '\f16a'
+						font-family: 'FontAwesome'
+						font-size: 45px
+						position: absolute
+						left: 50%
+						top: 50%
+						height: 50px
+						width: 50px
+						pointer-events: none
+					&:hover
+						&:after
+							color: #e62117
+					&.active
+						&:after
+							display: none
+				.iframe-holder
+					height: 200px
+					background-size: cover
+					background-position: 50% 50%
+					iframe
+						height: 100%
+						width: 100%
+					
+
+
+
+
+
 .anim-holder
 	#anim-block-1
 		height: 140px
@@ -249,3 +338,8 @@ section.test-block
 		animation: anim4 2s infinite
 		transition: all 0
 
+.see-more
+	text-align: center
+	margin-top: 70px
+	i
+		margin-left: 20px
