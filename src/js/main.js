@@ -49,10 +49,15 @@ $(window).on('load', function() {
 			$self= $(this),
 			selfData = $self.attr('data-href');
 
-			$('.iframe-holder').removeClass('active');
+			$('.iframe-holder').removeClass('active').html('');
 			$self.addClass('active');
-			$self.html('<iframe src="'+selfData+'" frameborder="0" allowfullscreen></iframe>');
-			console.log($self)
+
+			$self.html('<iframe id="ytVid"src="http://www.youtube.com/embed/'+selfData+'?enablejsapi=1" frameborder="0" allowfullscreen></iframe>');
+			
+			$('#ytVid').on('load', function() {
+				var iframe = document.getElementById("ytVid").contentWindow;
+				iframe.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+			})
 			
 		})
 

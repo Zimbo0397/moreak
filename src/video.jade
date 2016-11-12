@@ -9,7 +9,7 @@ html(lang='ru')
 		include ./partials/noscript.jade
 		include ./partials/top-line.jade
 
-		section.top-line(style='background-image: url(../img/content/bg-1.jpg)')
+		section.top-line(style='background-image: url(img/content/bg-1.jpg)')
 			.shad-bg
 				.top-title
 					h2 Food with love
@@ -25,25 +25,26 @@ html(lang='ru')
 
 				.video-holder
 					.inline-layout.col-3
-						mixin new-video-item(ysrc, imgsrc)
+						mixin new-video-item(ysrc, imgsrc, name)
 							.video-item
+								h3= name
 								.iframe-holder(data-href= ysrc, style="background-image: url( "+imgsrc+")")
 
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('z5hyxelB1XE', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('tTa9ntI2l9k', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('eEY6AQK0ckg', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('ZhKB5kLjrmM', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('0ucczxu9nlQ', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('cyvnhzNA4yY', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('QrzfwrfnSMc', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('0sMKeNy', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
 
 					.see-more
@@ -57,25 +58,30 @@ html(lang='ru')
 
 				.video-holder
 					.inline-layout.col-3
-						mixin new-video-item(ysrc, imgsrc)
+						mixin new-video-item(ysrc, imgsrc, name)
 							.video-item
+								h3= name
 								.iframe-holder(data-href= ysrc, style="background-image: url( "+imgsrc+")")
 
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('2wkO4vgrUj0', 'img/content/video-bg-1.jpg', 'Лазанья мать её ! ! !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('YTZ9X694TFY', 'img/content/video-bg-1.jpg',
+						'Испанскай или Краковский Суп?'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('xAPDmvIOcv8', 'img/content/video-bg-1.jpg',
+						'Масло Креветочное. How to Make Butter Shrimp'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('qZ6_mSsGBpQ', 'img/content/video-bg-1.jpg',
+						'Курица приготовленная в СТИРАЛЬНОЙ МАШИНЕ'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('s9TBlBtP8iI', 'img/content/video-bg-1.jpg',
+						'Стейк Рибай приготовленный УТЮГОМ !'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('n5wrtGhxPmc', 'img/content/video-bg-1.jpg',
+						'Колбаски.How to make sausages.'
 						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
-						)
-						+new-video-item('https://www.youtube.com/embed/a7TMoJas2G0', 'img/content/video-bg-1.jpg'
+						+new-video-item('302vHqEZFeY', 'img/content/video-bg-1.jpg',
+						'Испанскай или Краковский Суп?'
 						)
 
 					.see-more
