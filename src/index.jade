@@ -54,12 +54,11 @@ html(lang='ru')
 				ul.inline-layout.col-4
 					mixin new-food-item(name, src)
 						li.food-item
-							a(href="")
-								.image-holder
-									img.fake-img(src= src, alt= src)
-									.img(style='background-image: url( '+src+')')
-								.description
-									p= name
+							.image-holder
+								img.fake-img(src= src, alt= src)
+								.img(style='background-image: url( '+src+')')
+							.description
+								p= name
 							
 					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-1.jpg')
 					+new-food-item('Моя с.ка вкуснейшая лазанья пальчики оближешь', 'img/content/main-gal-2.jpg')

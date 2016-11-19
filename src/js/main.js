@@ -30,15 +30,7 @@ $(window).on('load', function() {
 })
 
 
-// Blueimp Init
-// document.getElementById('links').onclick = function (event) {
-//     event = event || window.event;
-//     var target = event.target || event.srcElement,
-//         link = target.src ? target.parentNode : target,
-//         options = {index: link, event: event},
-//         links = this.getElementsByTagName('a');
-//     blueimp.Gallery(links, options);
-// };
+
 
 
 $(window).on('load', function() {
@@ -64,3 +56,20 @@ $(window).on('load', function() {
 	});
 	
 });
+
+
+$('#m-nav-btn').on('click', function() {
+	$('.fixed-panel').toggleClass('open')
+})
+
+// Blueimp Init
+if(document.getElementById('links')) {
+	document.getElementById('links').onclick = function (event) {
+	    event = event || window.event;
+	    var target = event.target || event.srcElement,
+	        link = target.src ? target.parentNode : target,
+	        options = {index: link, event: event},
+	        links = this.getElementsByTagName('a');
+	    blueimp.Gallery(links, options);
+	};
+}

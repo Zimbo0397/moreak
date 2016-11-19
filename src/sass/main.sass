@@ -13,8 +13,6 @@ body
 		height: 0
 		width: 0
 
-*
-	transition: all .3s
 
 
 //----------------------------------
@@ -27,27 +25,38 @@ section.test-block
 //----------------------------------
 .fixed-panel
 	position: fixed
-	height: 70px
+	max-height: 70px
 	width: 100%
 	background: rgba(0, 0, 0, 0.64)
 	padding: 20px 0
 	z-index: 10
+	overflow: hidden
+	transition: height .5s
+	&.open
+		overflow: initial
+		max-height: 900px
+		transition: max-height .5s
 
 .top-navigation
-	text-align: right
-	li
-		display: inline-block
-		transition: background .2s
-		a
-			color: #fff
-			margin: 0 10px
-		&:hover
-			background: #12908b
+	.desktop-menu
+		text-align: right
+		li
+			display: inline-block
 			transition: background .2s
+			a
+				color: #fff
+				margin: 0 10px
+			&:hover
+				background: #12908b
+				transition: background .2s
+.desktop-menu
+	@media #{$media-tablet-max}
+		display: none
 .logo-block
 	position: absolute
-	left: 0
+	left: 20px
 	color: #fff
+
 	.lv-2
 		font-size: 12px
 		padding-left: 67px
@@ -65,18 +74,40 @@ section.test-block
 		background: rgba(0, 0, 0, 0.54)
 		white-space: nowrap
 		width: auto
+		@media #{$media-tablet-max}
+			padding: 15px
 		h2
 			font-weight: 900
 			font-size: 60px
 			line-height: 65px
+			@media #{$media-tablet-max}
+				font-size: 40px
+				line-height: 45px
+			@media #{$media-mobile-max}
+				font-size: 30px
+				line-height: 35px
 		h3
 			padding-left: 90px
 			font-size: 50px
 			line-height: 55px
+			@media #{$media-tablet-max}
+				font-size: 30px
+				line-height: 35px
+			@media #{$media-mobile-max}
+				font-size: 20px
+				line-height: 25px
 		h4
 			font-size: 45px
 			line-height: 50px
 			padding-left: 300px
+			@media #{$media-tablet-max}
+				font-size: 20px
+				line-height: 25px
+				padding-left: 250px
+			@media #{$media-mobile-max}
+				font-size: 15px
+				line-height: 20px
+				padding-left: 180px
 .shad-bg
 	position: absolute
 	left: 0
@@ -84,6 +115,25 @@ section.test-block
 	width: 100%
 	height: 100%
 	background: rgba(0, 0, 0, 0.23)
+
+.mobile-menu-holder
+	padding: 25px 20px
+	@media #{$media-tablet-min}
+		display: none
+	li
+		margin: 10px 0
+	#m-nav-btn
+		position: absolute
+		right: 20px
+		top: 20px
+		height: 24px
+		width: 50px
+		cursor: pointer
+		span
+			display: block
+			height: 3px
+			background: #f0f0f0
+			margin-bottom: 7px
 
 #scroll-btn
 	position: absolute
@@ -115,6 +165,12 @@ section.test-block
 
 .about
 	color: #000
+	.inline-layout
+		position: relative
+	.inline-layout.col-2 > *
+		@media #{$media-lg-max}
+			width: 100%
+
 	.text-holder
 		padding-top: 110px
 		h4
@@ -122,28 +178,64 @@ section.test-block
 			line-height: 40px
 			margin-bottom: 15px
 			font-family: 'Lobster', cursive
+			@media #{$media-tablet-max}
+				font-size: 25px
+				line-height: 30px
+				margin-bottom: 5px
 		p
 			padding-left: 100px
 			font-size: 25px
 			line-height: 30px
+			@media #{$media-tablet-max}
+				padding-left: 20px
+				font-size: 18px
+				line-height: 23px
+		@media #{$media-tablet-max}
+			padding-top: 520px
+	.image-holder
+		@media #{$media-lg-max}
+			position: absolute
+			top: 0
+			right: 0
+			width: 340px !important
+		@media #{$media-tablet-max}
+			top: 0
+			right: 50%
+			transform: translateX(50%)
+			width: 300px !important
 	
 .my-food
 	overflow: hidden
 	padding-bottom: 150px
+	.inline-layout.col-4 > *
+		@media #{$media-lg-max}
+			width: 33.33333%
+		@media #{$media-tablet-max}
+			width: 50%
+		@media #{$media-mobile-max}
+			width: 100%
+			
 	.food-item
 		padding: 20px
+		position: relative
+		z-index: 2
 		.image-holder
 			height: 180px
 			margin-bottom: 20px
 		.description
+			height: 75px
+			overflow: hidden
 			p
 				color: #fff
 
 .footer
 	margin: 150px 0 0 0
+	.inline-layout.col-2 > *
+		@media #{$media-tablet-max}
+			width: 100%
 	.form-holder
 		.form-group
-			width: 300px
+			max-width: 300px
 			margin-bottom: 20px
 			input,
 			textarea,
@@ -220,43 +312,68 @@ section.test-block
 		&:nth-child(10n + 1)
 			width: 50%
 			height: 400px
+			
 		&:nth-child(10n + 2)
 			width: 25%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 50%
 		&:nth-child(10n + 3)
 			width: 25%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 50%
 		&:nth-child(10n + 4)
 			width: 50%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 100%
 		&:nth-child(10n + 5)
 			width: 25%
 			height: 400px
+			@media #{$media-tablet-max}
+				width: 50%
 			img
 				width: auto
 				height: 100%
 		&:nth-child(10n + 6)
 			width: 25%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 50%
 		&:nth-child(10n + 7)
 			width: 25%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 50%
 		&:nth-child(10n + 8)
 			width: 25%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 50%
 		&:nth-child(10n + 9)
 			width: 25%
 			height: 200px
+			@media #{$media-tablet-max}
+				width: 50%
 		&:nth-child(10n + 10)
 			width: 50%
 			height: 200px
 			float: left
+			@media #{$media-tablet-max}
+				width: 100%
 		// .image-holder
 		// 	height: 100%
 
 
 .video
 	.video-holder
+		.inline-layout.col-3 > *
+			@media #{$media-tablet-max}
+				width: 50%
+			@media #{$media-mobile-max}
+				width: 100%
+
 		.inline-layout
 			.video-item
 				padding: 10px
@@ -333,6 +450,11 @@ section.test-block
 		background-size: cover
 		transform: rotate(90deg)
 		animation: anim3 1s infinite
+		@media #{$media-tablet-max}
+			left: -80px
+			top: auto
+			bottom: 0
+			transform: rotate(18deg)
 	#anim-block-4
 		height: 140px
 		width: 200px
@@ -344,9 +466,73 @@ section.test-block
 		transform: rotate(-90deg)
 		animation: anim4 2s infinite
 		transition: all 0
+		@media #{$media-tablet-max}
+			right: -83px
+			top: auto
+			bottom: -6px
+			transform: rotate(-10deg)
 
 .see-more
 	text-align: center
 	margin-top: 70px
 	i
 		margin-left: 20px
+
+.blog
+	.blog-item
+		position: relative
+		padding-left: 150px
+		margin-top: 40px
+		@media #{$media-tablet-max}
+			padding-left: 0
+		.time-holder
+			position: absolute
+			left: 0px
+			top: 0
+			color: #948f8f
+			white-space: nowrap
+			width: 150px
+			overflow: hidden
+			@media #{$media-tablet-max}
+				position: static
+				width: 100%
+				font-size: 15px
+			.time
+				position: relative
+				padding-left: 40px
+				@media #{$media-tablet-max}
+					display: inline-block
+					padding-left: 25px
+				&:after
+					position: absolute
+					left: 0px
+					top: 0
+					content: "\f073"
+					font-family: 'FontAwesome'
+					font-size: 25px
+					@media #{$media-tablet-max}
+						font-size: 15px
+			.date
+				position: relative
+				padding-left: 40px
+				margin-bottom: 10px
+				@media #{$media-tablet-max}
+					display: inline-block
+					padding-left: 25px
+					margin-right: 20px
+				&:after
+					position: absolute
+					left: 0px
+					top: 0
+					content: "\f017"
+					font-family: 'FontAwesome'
+					font-size: 25px
+					@media #{$media-tablet-max}
+						font-size: 15px
+
+		.description
+			margin-top: 20px
+			@media #{$media-tablet-max}
+				font-size: 14px
+				line-height: 18px
+
